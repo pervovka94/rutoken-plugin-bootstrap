@@ -1,0 +1,51 @@
+{
+    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "env": {
+        "browser": true,
+        "webextensions": true
+    },
+    "rules": {
+        "arrow-parens": [
+            "error",
+            "always"
+        ],
+        "quotes": [
+            2,
+            "single",
+            "avoid-escape"
+        ],
+        "indent": [
+            "error",
+            4
+        ],
+        "no-extend-native": [
+            "error", 
+            { 
+                "exceptions": [
+                    "Date"
+                ] 
+            }
+        ],
+        "implicit-arrow-linebreak": [
+            0,
+            "below"
+        ],       
+        "object-shorthand": [
+            "warn"
+        ],
+        "consistent-return": [
+            "warn"
+        ],        
+        "object-curly-newline": [
+            "error",
+            {
+                "multiline": true
+            }
+        ],
+        "max-len": [
+            "warn",
+            120
+        ]
+    }
+}
