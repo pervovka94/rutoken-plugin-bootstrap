@@ -1,8 +1,14 @@
 class PluginError {
     constructor(err, method, errorCodes) {
         /* eslint-disable  no-restricted-globals */
-        if (err.message && !isNaN(Number(err.message))) {
-            const code = Number(err.message);
+        let code = null;
+        if (err.message) {
+            code = Number(err.message);
+        } else {
+            code = Number(err);
+        }
+
+        if (errorCodes[code]) {
             this.description = errorCodes[code];
             this.code = code;
         } else {
