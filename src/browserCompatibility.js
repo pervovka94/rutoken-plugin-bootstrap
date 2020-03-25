@@ -43,10 +43,32 @@ class BrowserCompatibility {
         if (!brs) throw new NoSupportBrowserError(this.browser.name, Object.keys(browsers));
 
         this.brs = brs;
+
+        const detector = this.detectedBrowser;
+        const browserName = this.browser.name;
+
+        const version = this.brs.reduce((previous, current) => {
+            if (previous.pluginVersion > current.pluginVersion) {
+                if (detector.satisfies({ [browserName]: previous.browserSupportedVersions })) {
+                    return previous;
+                }
+                return current;
+            }
+            return current;
+        }).pluginVersion;
+
+        const index = this.brs.findIndex((b) => b.pluginVersion === version);
+
+        if (this.brs != null && index !== -1) {
+            this.browserConfigVersion = this.brs[index];
+            this.brs = this.brs.slice(index);
+        } else {
+            throw new NoSupportPluginVersionError(this.os.name);
+        }
     }
 
     needToCheckInstalledExtension() {
-        return this.brs.extensionCheck;
+        return this.browserConfigVersion.extensionCheck;
     }
 
     isCurrentBrowserSupported() {
@@ -54,7 +76,7 @@ class BrowserCompatibility {
     }
 
     getSupportedBrowsersByPluginVersion(version) {
-        const { versions } = this.brs;
+        const versions = this.brs;
 
         for (let index = 0; index < versions.length; index += 1) {
             const x = versions[index];

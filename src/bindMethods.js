@@ -7,6 +7,7 @@ function bindMethods(plugin) {
 
     Object.keys(plugin).forEach((key) => {
         if (plugin[key].prototype !== undefined) {
+            /* eslint func-names: ["error", "never"] */
             this[key] = function () {
                 return Promise.resolve().then(() => plugin[key].apply(this, arguments))
                     .catch((err) => {

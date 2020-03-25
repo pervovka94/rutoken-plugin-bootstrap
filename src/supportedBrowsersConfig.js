@@ -4,98 +4,104 @@ const supportedBrowsers = {
         Windows:
         {
             'Internet Explorer': {
-                extensionCheck: false,
                 versions: [
                     {
                         browserSupportedVersions: '>10',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: false,
                     },
                     {
                         browserSupportedVersions: '>10',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: false,
                     },
                 ],
             },
             Opera: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>15',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                     {
                         browserSupportedVersions: '>15',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             'Microsoft Edge': {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>10',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             Firefox: {
-                extensionCheck: false,
                 versions: [
                     {
-                        browserSupportedVersions: '>52',
-                        pluginVersion: '4.3.0.0',
+                        browserSupportedVersions: '>73',
+                        pluginVersion: '4.5.0.0',
+                        extensionCheck: true,
                     },
                     {
                         browserSupportedVersions: '>52',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             Chrome: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>50',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                     {
                         browserSupportedVersions: '>50',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             'Yandex Browser': {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>1',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                     {
                         browserSupportedVersions: '>1',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             SputnikBrowser: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>3',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                     {
                         browserSupportedVersions: '>3',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             Vivaldi: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>2',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
@@ -103,42 +109,43 @@ const supportedBrowsers = {
         macOS:
         {
             Opera: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>15',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             Firefox: {
-                extensionCheck: false,
                 versions: [
                     {
-                        browserSupportedVersions: '>51',
-                        pluginVersion: '4.3.0.0',
+                        browserSupportedVersions: '>73',
+                        pluginVersion: '4.5.0.0',
+                        extensionCheck: true,
                     },
                     {
                         browserSupportedVersions: '>51',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: false,
                     },
                 ],
             },
             Chrome: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>50',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             'Yandex Browser': {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>1',
                         pluginVersion: '4.3.0.0',
+                        extensionCheck: true,
                     },
                 ],
             },
@@ -146,34 +153,34 @@ const supportedBrowsers = {
         Linux:
         {
             Firefox: {
-                extensionCheck: false,
                 versions: [
                     {
-                        browserSupportedVersions: '>50',
-                        pluginVersion: '4.3.0.0',
+                        browserSupportedVersions: '>73',
+                        pluginVersion: '4.5.0.0',
+                        extensionCheck: true,
                     },
                     {
                         browserSupportedVersions: '>50',
                         pluginVersion: '4.2.0.0',
+                        extensionCheck: false,
                     },
                 ],
             },
-
             Opera: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>15',
                         pluginVersion: '4.3.3.0',
+                        extensionCheck: true,
                     },
                 ],
             },
             Chrome: {
-                extensionCheck: true,
                 versions: [
                     {
                         browserSupportedVersions: '>50',
                         pluginVersion: '4.3.3.0',
+                        extensionCheck: true,
                     },
                 ],
             },

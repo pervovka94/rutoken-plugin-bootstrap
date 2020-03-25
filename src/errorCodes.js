@@ -1,3 +1,4 @@
+/* eslint max-len: ["error", { "ignoreStrings": true }] */
 const getErrorCodes = (errorCodes) => ({
     [errorCodes.UNKNOWN_ERROR]: 'Неизвестная ошибка',
     [errorCodes.BAD_PARAMS]: 'Неправильные параметры',

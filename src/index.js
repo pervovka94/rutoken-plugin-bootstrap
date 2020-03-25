@@ -36,7 +36,6 @@ class Plugin {
                 return Promise.resolve(this);
             })
             .catch((err) => {
-                console.warn(err);
                 throw err;
             });
     }
